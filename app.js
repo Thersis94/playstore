@@ -2,8 +2,10 @@ const express = require("express");
 const morgan = require("morgan");
 
 const app = express();
+const cors = require('cors');
 
 app.use(morgan("common"));
+app.use(cors());
 
 const applications = require("./app-data.js");
 
